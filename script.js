@@ -6,6 +6,10 @@ const luckStart = 'Luck';
 const actionStart = 'You should';
 const goalsStart = 'You will';
 
+const luckResult = generateLuck();
+const actionResult = generateAction();
+const goalResult = generateGoal();
+
 function generateLuck() {
     luck = Math.floor(Math.random() * 3);
 
@@ -18,7 +22,6 @@ function generateLuck() {
             return luckStart + ' will not be necessary';
     }
 }
-
 console.log(generateLuck())
 
 function generateAction() {
@@ -43,7 +46,6 @@ function generateAction() {
             return actionStart + ' find a new hobby'; 
     }
 }
-
 console.log(generateAction())
 
 function generateGoal() {
@@ -60,5 +62,5 @@ function generateGoal() {
             return goalsStart + ' will achieve something unexpected';
     }
 }
-
 console.log(generateGoal());
+
