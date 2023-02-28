@@ -7,7 +7,7 @@ const actionStart = 'You should';
 const goalsStart = 'You will';
 
 function generateLuck() {
-    luck = Math.floor(Math.random() * 3)
+    luck = Math.floor(Math.random() * 3);
 
     if (luck === 0) {
         return luckStart + ' is on your side';
@@ -21,7 +21,7 @@ function generateLuck() {
 console.log(generateLuck())
 
 function generateAction() {
-    action = Math.floor(Math.random() * 8)
+    action = Math.floor(Math.random() * 8);
 
     switch(action) {
         case 0:
@@ -44,3 +44,20 @@ function generateAction() {
 }
 
 console.log(generateAction())
+
+function generateGoal() {
+    goals = Math.floor(Math.random() * 4);
+
+    switch(goals) {
+        case 0:
+            return goalsStart + ' will achieve your goals';
+        case 1:
+            return goalsStart + ' will not achieve your goals';
+        case 2:
+            return goalsStart + ' will partially achieve your goals';
+        case 3:
+            return goalsStart + ' will achieve something unexpected';
+    }
+}
+
+console.log(generateGoal());
