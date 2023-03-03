@@ -6,9 +6,13 @@ const luckStart = 'Luck';
 const actionStart = 'You should';
 const goalsStart = 'You will';
 
-const luckResult = generateLuck();
-const actionResult = generateAction();
-const goalResult = generateGoal();
+let luckResult;
+let actionResult;
+let goalResult;
+
+const btn = document.getElementById('button')
+const luckDisplay = document.getElementById('luck');
+console.log(luckDisplay)
 
 function generateLuck() {
     luck = Math.floor(Math.random() * 3);
@@ -63,4 +67,13 @@ function generateGoal() {
     }
 }
 console.log(generateGoal());
+
+btn.onclick = () => {
+    luckResult = generateLuck();
+    luckDisplay.textContent = luckResult;
+    console.log(luckResult, luckDisplay)
+    // actionResult = generateAction();
+    // goalResult = generateGoal(); 
+}
+
 
