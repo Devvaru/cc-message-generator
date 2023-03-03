@@ -12,7 +12,8 @@ let goalResult;
 
 const btn = document.getElementById('button')
 const luckDisplay = document.getElementById('luck');
-console.log(luckDisplay)
+const actionDisplay = document.getElementById('action')
+const goalDisplay = document.getElementById('goals')
 
 function generateLuck() {
     luck = Math.floor(Math.random() * 3);
@@ -26,7 +27,6 @@ function generateLuck() {
             return luckStart + ' will not be necessary';
     }
 }
-console.log(generateLuck())
 
 function generateAction() {
     action = Math.floor(Math.random() * 8);
@@ -50,7 +50,6 @@ function generateAction() {
             return actionStart + ' find a new hobby'; 
     }
 }
-console.log(generateAction())
 
 function generateGoal() {
     goals = Math.floor(Math.random() * 4);
@@ -66,14 +65,16 @@ function generateGoal() {
             return goalsStart + ' will achieve something unexpected';
     }
 }
-console.log(generateGoal());
 
 btn.onclick = () => {
     luckResult = generateLuck();
     luckDisplay.textContent = luckResult;
-    console.log(luckResult, luckDisplay)
-    // actionResult = generateAction();
-    // goalResult = generateGoal(); 
-}
+
+    actionResult = generateAction();
+    actionDisplay.textContent = actionResult;
+
+    goalResult = generateGoal();
+    goalDisplay.textContent = goalResult;
+};
 
 
